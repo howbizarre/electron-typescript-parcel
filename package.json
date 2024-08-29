@@ -1,15 +1,16 @@
 {
   "name": "electron-typescript-parcel",
   "version": "1.0.0",
-  "main": "./dist/main.js",
-  "scripts": {
-    "start": "npm run build --prefix ./electron && npm run build --prefix ./browser && electron ."
-  },
   "keywords": [],
   "author": "How Bizarre",
   "license": "ISC",
   "description": "",
-  "devDependencies": {
-    "electron": "^32.0.1"
+  "workspaces": [
+    "packages/electron",
+    "packages/browser"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "start": "npm start --workspaces --if-present"
   }
 }

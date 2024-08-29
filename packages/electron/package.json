@@ -1,14 +1,17 @@
 {
   "name": "electron",
   "version": "1.0.0",
+  "main": "../../dist/main.js",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "start": "electron ."
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "typescript": "^5.5.4"
+    "typescript": "^5.5.4",
+    "electron": "^32.0.1"
   }
 }
