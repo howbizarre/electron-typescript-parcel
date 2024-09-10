@@ -1,5 +1,5 @@
-const toggleDarkMode = document.getElementById("toggle-dark-mode");
 const themeSource = document.getElementById("theme-source");
+const toggleDarkMode = document.getElementById("toggle-dark-mode");
 
 if (themeSource && toggleDarkMode) {
   toggleDarkMode.addEventListener("click", async () => {
