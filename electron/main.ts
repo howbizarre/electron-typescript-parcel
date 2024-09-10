@@ -13,7 +13,7 @@ const createWindow = (): void => {
     },
   });
 
-  mainWindow.loadFile("../../dist/index.html");
+  mainWindow.loadFile("./dist/index.html");
 
   ipcMain.handle("dark-mode:toggle", () => {
     if (nativeTheme.shouldUseDarkColors) {

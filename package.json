@@ -1,16 +1,16 @@
 {
   "name": "electron-typescript-parcel",
   "version": "1.0.0",
-  "keywords": [],
-  "author": "How Bizarre",
-  "license": "ISC",
-  "description": "",
-  "workspaces": [
-    "packages/electron",
-    "packages/browser"
-  ],
+  "description": "Download the project and need do execute `npm install` in the `root` project folder.",
+  "main": "./dist/main.js",
   "scripts": {
-    "build": "npm run build --workspaces",
-    "start": "npm start --workspace=electron"
+    "start": "npm run build --prefix ./electron && npm run build --prefix ./browser && electron .",
+    "postinstall": "cd browser && npm install && cd ../electron && npm install"
+  },
+  "keywords": ["electron", "typescript", "parcel"],
+  "author": "How Bizarre",
+  "license": "CC BY 4.0",
+  "devDependencies": {
+    "electron": "^32.0.2"
   }
 }
